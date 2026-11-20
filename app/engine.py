@@ -190,6 +190,10 @@ class SearchEngine:
                         flds = sorted({f for p in present for f in p[1]})
                         best[d] = (sc, len(present) / len(maps),
                                    {"term": c.text, "via": a.source, "matched": a.surface, "fields": flds})
+            # для объяснения: совпало ли и исходное слово, если лучший путь — синоним
+            orig_maps = [tdocs(t) for t in c.alts[0].phrase]
+            for d, (sc, frac, m) in best.items():
+                m["original_also"] = m["via"] in ("synonym", "compound") and any(d in om for om in orig_maps)
             per_concept.append(best)
 
         negated_docs: list[tuple[str, set[int]]] = []

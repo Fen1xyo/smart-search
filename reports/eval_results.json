@@ -331,9 +331,9 @@
       "zero_rate_all": 0.1111111111111111
     },
     "latency_ms": {
-      "p50": 0.071,
-      "p95": 0.106,
-      "max": 0.17,
+      "p50": 0.075,
+      "p95": 0.111,
+      "max": 0.489,
       "n": 720
     }
   },
@@ -922,5 +922,95 @@
     "queries_top1_changed": 0,
     "relevant_rank_changes": [],
     "harmful_promotions": []
-  }
+  },
+  "sweep_dev": [
+    {
+      "threshold": 0.4,
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 1.0,
+      "mrr@10": 1.0,
+      "ndcg@10": 1.0,
+      "false_zero_rate": 0.0,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.1111111111111111
+    },
+    {
+      "threshold": 0.45,
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 1.0,
+      "mrr@10": 1.0,
+      "ndcg@10": 1.0,
+      "false_zero_rate": 0.0,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.1111111111111111
+    },
+    {
+      "threshold": 0.5,
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 1.0,
+      "mrr@10": 1.0,
+      "ndcg@10": 1.0,
+      "false_zero_rate": 0.0,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.1111111111111111
+    },
+    {
+      "threshold": 0.55,
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 1.0,
+      "mrr@10": 1.0,
+      "ndcg@10": 1.0,
+      "false_zero_rate": 0.0,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.1111111111111111
+    },
+    {
+      "threshold": 0.6,
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 0.9375,
+      "mrr@10": 0.9375,
+      "ndcg@10": 0.9375,
+      "false_zero_rate": 0.0625,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.16666666666666666
+    },
+    {
+      "threshold": 0.65,
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 0.9375,
+      "mrr@10": 0.9375,
+      "ndcg@10": 0.9375,
+      "false_zero_rate": 0.0625,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.16666666666666666
+    },
+    {
+      "threshold": 0.7,
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 0.9375,
+      "mrr@10": 0.9375,
+      "ndcg@10": 0.9375,
+      "false_zero_rate": 0.0625,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.16666666666666666
+    },
+    {
+      "threshold": 0.8,
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 0.9375,
+      "mrr@10": 0.9375,
+      "ndcg@10": 0.9375,
+      "false_zero_rate": 0.0625,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.16666666666666666
+    }
+  ]
 }

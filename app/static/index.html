@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
 <title>Умный поиск — демо (команда №2)</title>
 <style>
   :root { --bg:#f6f7f9; --card:#fff; --ink:#1d2330; --mute:#667085; --line:#e4e7ec; --acc:#2856d8; --ok:#137a4b; --warn:#b54708; --bad:#b42318; }
@@ -152,7 +153,7 @@ function render(r, other) {
   if (other) other.items.forEach((it, i) => otherRank[it.id] = i + 1);
   r.items.forEach((it, i) => {
     const b = it.business_boost;
-    const why = it.matched.map(m => `<b>${esc(m.term)}</b> ${VIA_RU[m.via] || m.via}${m.via !== "original" ? " «" + esc(m.matched) + "»" : ""} → ${m.fields.map(f => FIELD_RU[f] || f).join(", ")}`).join("; ");
+    const why = it.matched.map(m => `<b>${esc(m.term)}</b> ${m.original_also ? "как есть и " : ""}${VIA_RU[m.via] || m.via}${m.via !== "original" ? " «" + esc(m.matched) + "»" : ""} → ${m.fields.map(f => FIELD_RU[f] || f).join(", ")}`).join("; ");
     const miss = it.business.missing.length ? ` <span class="muted">(нет: ${it.business.missing.join(", ")} → нейтрально)</span>` : "";
     h += `<div class="item"><div class="rank">${i + 1}</div><div>
       <h3>${esc(it.name)} <span class="muted">${esc(it.id)}</span>${it.exact_match ? ' <span class="chip syn">точное совпадение</span>' : ""}</h3>

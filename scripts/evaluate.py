@@ -28,6 +28,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(errors="replace")  # консоль Windows с cp866/cp1251
 
 from app.config import DEFAULT_CONFIG, SearchConfig  # noqa: E402
 from app.data_loader import load_catalog, load_eval, load_events, load_synonym_groups  # noqa: E402
