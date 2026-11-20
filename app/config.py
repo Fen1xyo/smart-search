@@ -39,7 +39,7 @@ class SearchConfig:
     use_negation: bool = True
     use_generic_terms: bool = True
     use_name_coverage: bool = True
-    use_compound: bool = False  # TODO
+    use_compound: bool = True   # составные слова; добавлено ПОСЛЕ просмотра test-ошибок (см. README)
     use_coverage_gate: bool = True
     use_business_boost: bool = True
 
@@ -54,6 +54,8 @@ class SearchConfig:
     exact_name_bonus: float = 1.0    # добавка к rel_norm при точном совпадении ID / названия
     negation_penalty: float = 0.5    # множитель релевантности товара, совпавшего с «без X»
     name_coverage_bonus: float = 0.05  # +к rel_norm, если запрос покрывает все (нечисловые) слова названия
+    compound_weight: float = 0.6     # вклад совпадения части составного слова
+    compound_min_len: int = 5
     generic_term_factor: float = 0.2   # вес родовых слов («система», «менеджер») в coverage
 
     # --- опечатки ---

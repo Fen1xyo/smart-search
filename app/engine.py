@@ -1,6 +1,7 @@
 """Поисковый конвейер: запрос -> концепты -> кандидаты -> гейты -> reranking -> объяснение."""
 from __future__ import annotations
 
+import heapq
 import time
 from dataclasses import dataclass, field
 
@@ -11,7 +12,7 @@ from .index import FieldBM25, product_fields
 from .lexicon import Lexicon
 from .ranking import BusinessSignals, rerank
 from .spell import Speller
-from .text import GENERIC_TERMS, NEGATIONS, STOPWORDS, normalize, tokens, words
+from .text import GENERIC_TERMS, NEGATIONS, STOPWORDS, normalize, strip_pii, tokens, words
 
 
 @dataclass
@@ -58,6 +59,7 @@ class SearchEngine:
         self.name_stems = {p.id: {t for t in tokens(p.name, st) if not t.isdigit()} for p in products}
         self.signals = BusinessSignals(products, events or [], cfg.neutral_signal)
         self.categories = sorted({p.category for p in products if p.category})
+        self._term_cache: dict[str, dict[int, tuple[float, list[str]]]] = {}
 
     @classmethod
     def from_files(cls, cfg: SearchConfig = C.DEFAULT_CONFIG) -> "SearchEngine":
@@ -111,6 +113,18 @@ class SearchEngine:
                 concepts.append(Concept(w, [Alt((stems[i],), w0, src, w)], negative=neg))
                 i += 1
 
+        # Составные слова: «вирусов» -> «антивирус», «конференций» -> «видеоконференц».
+        # Только для слов, которых нет в индексе и которые не раскрыл словарь.
+        if cfg.use_compound:
+            for c in concepts:
+                (t,) = c.alts[0].phrase if len(c.alts[0].phrase) == 1 else (None,)
+                if t is None or len(c.alts) > 1 or t in self.index.vocab or len(t) < cfg.compound_min_len:
+                    continue
+                # только в одну сторону: слово запроса входит в составное слово каталога
+                # («вирус» ⊂ «антивирус»). Обратное («автосервис» ⊃ «сервис») даёт ложные совпадения.
+                hits = sorted(v for v in self.index.vocab if v != t and t in v and len(v) - len(t) <= 6)[:3]
+                c.alts += [Alt((v,), cfg.compound_weight, "compound", v) for v in hits]
+
         # Не засчитываем концепт через синоним, который пользователь сам написал другим словом
         # («crm для продаж»: «продаж» не должен совпадать через «crm» — это двойной счёт).
         typed = {c.alts[0].phrase for c in concepts}
@@ -120,6 +134,13 @@ class SearchEngine:
         for c in concepts:
             orig = c.alts[0].phrase
             c.weight = sum(self.index.idf(t) for t in orig) / len(orig)
+            if not any(t in self.index.vocab for t in orig):
+                # слово известно только через словарь («пк» -> «рабочая станция»): вес как у его
+                # представления в каталоге, а не как у полностью неизвестного слова
+                known = [sum(self.index.idf(t) for t in a.phrase) / len(a.phrase)
+                         for a in c.alts[1:] if all(t in self.index.vocab for t in a.phrase)]
+                if known:
+                    c.weight = max(known)
             if cfg.use_generic_terms and all(t in GENERIC_TERMS for t in orig):
                 c.weight *= cfg.generic_term_factor
         return {"words": ws, "corrections": corrections, "concepts": concepts,
@@ -132,7 +153,7 @@ class SearchEngine:
         cfg = self.cfg
         k = k or cfg.default_k
         q = (q or "").strip()[:300]
-        parsed = self.parse(q)
+        parsed = self.parse(strip_pii(q))  # ПДн не участвуют в поиске и не попадают в unmatched/normalized
         concepts: list[Concept] = parsed["concepts"]
         pos = [c for c in concepts if not c.negative]
         neg = [c for c in concepts if c.negative]
@@ -146,49 +167,56 @@ class SearchEngine:
             if w in self.exact_id:
                 exact.add(self.exact_id[w])
 
-        # кандидаты
-        cand_docs: set[int] = set()
-        for c in pos:
-            docs_c = set()
-            for a in c.alts:
-                for t in a.phrase:
-                    docs_c.update(self.index.docs_with(t))
-            cand_docs |= docs_c
-        for pid in exact:
-            cand_docs.add(self.pos_of[pid])
+        # Скоринг по спискам вхождений: вклад термина считается только для товаров, где он есть.
+        # Индекс неизменяем, поэтому вклады терминов кэшируются между запросами.
+        tcache = self._term_cache
 
+        def tdocs(t: str) -> dict[int, tuple[float, list[str]]]:
+            if t not in tcache:
+                tcache[t] = {d: self.index.term_score(d, t) for d in self.index.docs_with(t)}
+            return tcache[t]
+
+        per_concept: list[dict[int, tuple[float, float, dict]]] = []  # doc -> (score, frac, match)
+        for c in pos:
+            best: dict[int, tuple[float, float, dict]] = {}
+            for a in c.alts:
+                maps = [tdocs(t) for t in a.phrase]
+                docs = set(maps[0]).intersection(*maps[1:]) if a.source == "synonym" else set().union(*maps)
+                for d in docs:  # синоним-фраза засчитывается только целиком (пересечение)
+                    present = [m[d] for m in maps if d in m]
+                    full = len(present) == len(maps)
+                    sc = a.weight * sum(p[0] for p in present) * (1.0 if full else 0.5)
+                    if sc > best.get(d, (0.0,))[0]:
+                        flds = sorted({f for p in present for f in p[1]})
+                        best[d] = (sc, len(present) / len(maps),
+                                   {"term": c.text, "via": a.source, "matched": a.surface, "fields": flds})
+            per_concept.append(best)
+
+        negated_docs: list[tuple[str, set[int]]] = []
+        for c in neg:
+            hit: set[int] = set()
+            for a in c.alts:
+                maps = [tdocs(t) for t in a.phrase]
+                hit |= set(maps[0]).intersection(*maps[1:])
+            negated_docs.append((c.text, hit))
+
+        cand_docs: set[int] = set().union(*per_concept) if per_concept else set()
+        cand_docs |= {self.pos_of[pid] for pid in exact}
         total_w = sum(c.weight for c in pos) or 1.0
         scored = []
-        concept_hit = {id(c): 0 for c in pos}
+        concept_hit = [len(b) for b in per_concept]
         for d in cand_docs:
-            rel, cov_w, matches = 0.0, 0.0, []
-            for c in pos:
-                best, best_cov, best_m = 0.0, 0.0, None
-                for a in c.alts:
-                    parts = [self.index.term_score(d, t) for t in a.phrase]
-                    present = [p for p in parts if p[0] > 0]
-                    if not present:
-                        continue
-                    full = len(present) == len(parts)
-                    if not full and a.source == "synonym":
-                        continue  # синоним-фраза засчитывается только целиком
-                    frac = len(present) / len(parts)
-                    s = a.weight * sum(p[0] for p in present) * (1.0 if full else 0.5)
-                    if s > best:
-                        flds = sorted({f for p in present for f in p[1]})
-                        best, best_cov = s, frac
-                        best_m = {"term": c.text, "via": a.source, "matched": a.surface, "fields": flds}
-                if best_m:
-                    rel += best
-                    cov_w += c.weight * best_cov
-                    matches.append(best_m)
-                    concept_hit[id(c)] += 1
+            rel = cov_w = 0.0
+            matches = []
+            for c, b in zip(pos, per_concept):
+                if d in b:
+                    sc, frac, m = b[d]
+                    rel += sc
+                    cov_w += c.weight * frac
+                    matches.append(m)
             coverage = cov_w / total_w if pos else 0.0
-            penalized = []
-            for c in neg:
-                if any(all(self.index.term_score(d, t)[0] > 0 for t in a.phrase) for a in c.alts):
-                    rel *= cfg.negation_penalty
-                    penalized.append(c.text)
+            penalized = [text for text, hit in negated_docs if d in hit]
+            rel *= cfg.negation_penalty ** len(penalized)
             pid = self.products[d].id
             is_exact = pid in exact
             if rel <= 0 and not is_exact:
@@ -212,10 +240,15 @@ class SearchEngine:
             s["name_covered"] = bool(cfg.use_name_coverage and ns and ns <= q_stems)
             if s["name_covered"]:
                 s["rel_norm"] += cfg.name_coverage_bonus
-        ranked = rerank(scored, self.signals, cfg, segment, history or [])
+        # В reranking идут только товары, которые могут попасть в top-k: все прошедшие relevance
+        # gate (их может переставить буст) + k лучших из остальных. total_found — по всем.
+        gated = [x for x in scored if x["rel_norm"] >= cfg.relevance_gate]
+        rest = heapq.nlargest(k, (x for x in scored if x["rel_norm"] < cfg.relevance_gate),
+                              key=lambda x: (x["rel_norm"], x["pid"]))
+        ranked = rerank(gated + rest, self.signals, cfg, segment, history or [])
 
         items = [self._item(s, concepts) for s in ranked[:k]]
-        unmatched = [c.text for c in pos if concept_hit[id(c)] == 0]
+        unmatched = [c.text for c, n in zip(pos, concept_hit) if n == 0]
         latency = (time.perf_counter() - t0) * 1000
         did_you_mean = None
         if parsed["corrections"]:
@@ -233,8 +266,8 @@ class SearchEngine:
             "unmatched_terms": unmatched,
             "context": {"category": category, "segment": segment, "history_len": len(history or []),
                         "filtered_out_by_category": filtered_out},
-            "total_found": len(ranked),
-            "zero_result": len(ranked) == 0,
+            "total_found": len(scored),
+            "zero_result": len(scored) == 0,
             "items": items,
             "related_queries": self.related(parsed, items),
             "latency_ms": round(latency, 3),

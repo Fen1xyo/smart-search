@@ -79,6 +79,11 @@ _PHONE = re.compile(r"(?:\+?\d[\s\-()]*){10,}")
 _LONGNUM = re.compile(r"\b\d{10,}\b")
 
 
+def strip_pii(text: str) -> str:
+    """Для поиска: e-mail/телефоны/длинные номера не несут смысла для каталога — удаляем."""
+    return _LONGNUM.sub(" ", _PHONE.sub(" ", _EMAIL.sub(" ", text)))
+
+
 def mask_pii(text: str) -> str:
     text = _EMAIL.sub("<email>", text)
     text = _PHONE.sub("<phone>", text)
