@@ -1,0 +1,1202 @@
+[
+  {
+    "event_id": 1,
+    "query_id": "Q005",
+    "product_id": "P003",
+    "event_type": "purchase",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 2,
+    "query_id": "Q016",
+    "product_id": "P023",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 3,
+    "query_id": "Q011",
+    "product_id": "P024",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 4,
+    "query_id": "Q023",
+    "product_id": "P027",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 5,
+    "query_id": "Q018",
+    "product_id": "P012",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 6,
+    "query_id": "Q024",
+    "product_id": "P017",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 7,
+    "query_id": "Q030",
+    "product_id": "P027",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 8,
+    "query_id": "Q004",
+    "product_id": "P015",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 9,
+    "query_id": "Q006",
+    "product_id": "P017",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 10,
+    "query_id": "Q030",
+    "product_id": "P001",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 11,
+    "query_id": "Q006",
+    "product_id": "P018",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 12,
+    "query_id": "Q016",
+    "product_id": "P010",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 13,
+    "query_id": "Q024",
+    "product_id": "P018",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 14,
+    "query_id": "Q003",
+    "product_id": "P019",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 15,
+    "query_id": "Q010",
+    "product_id": "P019",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 16,
+    "query_id": "Q013",
+    "product_id": "P003",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 17,
+    "query_id": "Q026",
+    "product_id": "P014",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 18,
+    "query_id": "Q015",
+    "product_id": "P001",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 19,
+    "query_id": "Q028",
+    "product_id": "P023",
+    "event_type": "purchase",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 20,
+    "query_id": "Q002",
+    "product_id": "P005",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 21,
+    "query_id": "Q007",
+    "product_id": "P005",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 22,
+    "query_id": "Q031",
+    "product_id": "P016",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 23,
+    "query_id": "Q031",
+    "product_id": "P012",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 24,
+    "query_id": "Q019",
+    "product_id": "P020",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 25,
+    "query_id": "Q019",
+    "product_id": "P008",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 26,
+    "query_id": "Q031",
+    "product_id": "P007",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 27,
+    "query_id": "Q012",
+    "product_id": "P020",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 28,
+    "query_id": "Q031",
+    "product_id": "P005",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 29,
+    "query_id": "Q031",
+    "product_id": "P016",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 30,
+    "query_id": "Q006",
+    "product_id": "P019",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 31,
+    "query_id": "Q030",
+    "product_id": "P025",
+    "event_type": "purchase",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 32,
+    "query_id": "Q011",
+    "product_id": "P015",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 33,
+    "query_id": "Q010",
+    "product_id": "P006",
+    "event_type": "purchase",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 34,
+    "query_id": "Q025",
+    "product_id": "P030",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 35,
+    "query_id": "Q019",
+    "product_id": "P005",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 36,
+    "query_id": "Q012",
+    "product_id": "P016",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 37,
+    "query_id": "Q002",
+    "product_id": "P003",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 38,
+    "query_id": "Q029",
+    "product_id": "P029",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 39,
+    "query_id": "Q011",
+    "product_id": "P022",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 40,
+    "query_id": "Q011",
+    "product_id": "P008",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 41,
+    "query_id": "Q008",
+    "product_id": "P021",
+    "event_type": "purchase",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 42,
+    "query_id": "Q029",
+    "product_id": "P002",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 43,
+    "query_id": "Q028",
+    "product_id": "P001",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 44,
+    "query_id": "Q005",
+    "product_id": "P001",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 45,
+    "query_id": "Q004",
+    "product_id": "P003",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 46,
+    "query_id": "Q025",
+    "product_id": "P022",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 47,
+    "query_id": "Q008",
+    "product_id": "P010",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 48,
+    "query_id": "Q001",
+    "product_id": "P004",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 49,
+    "query_id": "Q012",
+    "product_id": "P008",
+    "event_type": "purchase",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 50,
+    "query_id": "Q001",
+    "product_id": "P006",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 51,
+    "query_id": "Q017",
+    "product_id": "P001",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 52,
+    "query_id": "Q004",
+    "product_id": "P025",
+    "event_type": "purchase",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 53,
+    "query_id": "Q030",
+    "product_id": "P022",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 54,
+    "query_id": "Q002",
+    "product_id": "P013",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 55,
+    "query_id": "Q007",
+    "product_id": "P015",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 56,
+    "query_id": "Q013",
+    "product_id": "P010",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 57,
+    "query_id": "Q011",
+    "product_id": "P027",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 58,
+    "query_id": "Q009",
+    "product_id": "P018",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 59,
+    "query_id": "Q016",
+    "product_id": "P027",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 60,
+    "query_id": "Q001",
+    "product_id": "P018",
+    "event_type": "purchase",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 61,
+    "query_id": "Q005",
+    "product_id": "P025",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 62,
+    "query_id": "Q031",
+    "product_id": "P030",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 63,
+    "query_id": "Q005",
+    "product_id": "P001",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 64,
+    "query_id": "Q014",
+    "product_id": "P002",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 65,
+    "query_id": "Q001",
+    "product_id": "P003",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 66,
+    "query_id": "Q010",
+    "product_id": "P010",
+    "event_type": "purchase",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 67,
+    "query_id": "Q012",
+    "product_id": "P017",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 68,
+    "query_id": "Q029",
+    "product_id": "P019",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 69,
+    "query_id": "Q028",
+    "product_id": "P030",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 70,
+    "query_id": "Q017",
+    "product_id": "P030",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 71,
+    "query_id": "Q020",
+    "product_id": "P029",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 72,
+    "query_id": "Q004",
+    "product_id": "P026",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 73,
+    "query_id": "Q019",
+    "product_id": "P022",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 74,
+    "query_id": "Q009",
+    "product_id": "P028",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 75,
+    "query_id": "Q029",
+    "product_id": "P003",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 76,
+    "query_id": "Q001",
+    "product_id": "P010",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 77,
+    "query_id": "Q012",
+    "product_id": "P022",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 78,
+    "query_id": "Q001",
+    "product_id": "P003",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 79,
+    "query_id": "Q023",
+    "product_id": "P014",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 80,
+    "query_id": "Q031",
+    "product_id": "P004",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 81,
+    "query_id": "Q023",
+    "product_id": "P027",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 82,
+    "query_id": "Q027",
+    "product_id": "P013",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 83,
+    "query_id": "Q018",
+    "product_id": "P024",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 84,
+    "query_id": "Q015",
+    "product_id": "P006",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 85,
+    "query_id": "Q021",
+    "product_id": "P006",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 86,
+    "query_id": "Q028",
+    "product_id": "P015",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 87,
+    "query_id": "Q006",
+    "product_id": "P004",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 88,
+    "query_id": "Q024",
+    "product_id": "P011",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 89,
+    "query_id": "Q031",
+    "product_id": "P012",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 90,
+    "query_id": "Q014",
+    "product_id": "P022",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 91,
+    "query_id": "Q008",
+    "product_id": "P008",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 92,
+    "query_id": "Q010",
+    "product_id": "P004",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 93,
+    "query_id": "Q008",
+    "product_id": "P026",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 94,
+    "query_id": "Q014",
+    "product_id": "P024",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 95,
+    "query_id": "Q015",
+    "product_id": "P003",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 96,
+    "query_id": "Q003",
+    "product_id": "P015",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 97,
+    "query_id": "Q026",
+    "product_id": "P009",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 98,
+    "query_id": "Q017",
+    "product_id": "P025",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 99,
+    "query_id": "Q031",
+    "product_id": "P003",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 100,
+    "query_id": "Q014",
+    "product_id": "P023",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 101,
+    "query_id": "Q025",
+    "product_id": "P007",
+    "event_type": "purchase",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 102,
+    "query_id": "Q011",
+    "product_id": "P006",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 103,
+    "query_id": "Q015",
+    "product_id": "P005",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 104,
+    "query_id": "Q003",
+    "product_id": "P025",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 105,
+    "query_id": "Q030",
+    "product_id": "P002",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 106,
+    "query_id": "Q013",
+    "product_id": "P016",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 107,
+    "query_id": "Q010",
+    "product_id": "P007",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 108,
+    "query_id": "Q001",
+    "product_id": "P015",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 109,
+    "query_id": "Q007",
+    "product_id": "P022",
+    "event_type": "purchase",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 110,
+    "query_id": "Q009",
+    "product_id": "P016",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 111,
+    "query_id": "Q007",
+    "product_id": "P020",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 112,
+    "query_id": "Q012",
+    "product_id": "P017",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 113,
+    "query_id": "Q028",
+    "product_id": "P022",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 114,
+    "query_id": "Q014",
+    "product_id": "P010",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 115,
+    "query_id": "Q025",
+    "product_id": "P011",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 116,
+    "query_id": "Q031",
+    "product_id": "P014",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 117,
+    "query_id": "Q024",
+    "product_id": "P007",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 118,
+    "query_id": "Q022",
+    "product_id": "P022",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 119,
+    "query_id": "Q017",
+    "product_id": "P003",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 120,
+    "query_id": "Q007",
+    "product_id": "P029",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 121,
+    "query_id": "Q001",
+    "product_id": "P010",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 122,
+    "query_id": "Q028",
+    "product_id": "P003",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 123,
+    "query_id": "Q015",
+    "product_id": "P003",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 124,
+    "query_id": "Q012",
+    "product_id": "P024",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 125,
+    "query_id": "Q025",
+    "product_id": "P020",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 126,
+    "query_id": "Q011",
+    "product_id": "P013",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 127,
+    "query_id": "Q027",
+    "product_id": "P018",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 128,
+    "query_id": "Q031",
+    "product_id": "P019",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 129,
+    "query_id": "Q001",
+    "product_id": "P018",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 130,
+    "query_id": "Q029",
+    "product_id": "P001",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 131,
+    "query_id": "Q007",
+    "product_id": "P025",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 132,
+    "query_id": "Q001",
+    "product_id": "P010",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 133,
+    "query_id": "Q010",
+    "product_id": "P004",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 134,
+    "query_id": "Q001",
+    "product_id": "P015",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 135,
+    "query_id": "Q029",
+    "product_id": "P001",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 136,
+    "query_id": "Q021",
+    "product_id": "P024",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 137,
+    "query_id": "Q020",
+    "product_id": "P016",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 138,
+    "query_id": "Q027",
+    "product_id": "P008",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 139,
+    "query_id": "Q002",
+    "product_id": "P017",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 140,
+    "query_id": "Q021",
+    "product_id": "P015",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 141,
+    "query_id": "Q010",
+    "product_id": "P010",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 142,
+    "query_id": "Q019",
+    "product_id": "P030",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 143,
+    "query_id": "Q027",
+    "product_id": "P023",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 144,
+    "query_id": "Q023",
+    "product_id": "P022",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 145,
+    "query_id": "Q007",
+    "product_id": "P002",
+    "event_type": "click",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 146,
+    "query_id": "Q017",
+    "product_id": "P029",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 147,
+    "query_id": "Q016",
+    "product_id": "P018",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 148,
+    "query_id": "Q024",
+    "product_id": "P009",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  },
+  {
+    "event_id": 149,
+    "query_id": "Q005",
+    "product_id": "P024",
+    "event_type": "add_to_cart",
+    "client_segment_synthetic": "SMB",
+    "is_mock": true
+  },
+  {
+    "event_id": 150,
+    "query_id": "Q030",
+    "product_id": "P017",
+    "event_type": "click",
+    "client_segment_synthetic": "Enterprise",
+    "is_mock": true
+  }
+]

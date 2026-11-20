@@ -1,0 +1,21 @@
+{
+  "_comment": "Сопоставление колонок исходного каталога внутренним полям. 26.11 поменять правую часть под реальные колонки. Отсутствующие колонки = null (нейтральные значения).",
+  "catalog": {
+    "id": ["product_id", "id", "sku", "article"],
+    "name": ["name", "title", "наименование"],
+    "description": ["description", "описание"],
+    "category": ["category", "категория", "category_name"],
+    "vendor": ["vendor", "brand", "вендор", "производитель"],
+    "attributes": ["attributes", "characteristics", "характеристики", "specs"],
+    "popularity": ["popularity_score_synthetic", "popularity", "popularity_score", "sales_count"],
+    "margin": ["margin_ratio_synthetic", "margin", "margin_ratio", "маржа"],
+    "price": ["price_rub_synthetic", "price", "цена"]
+  },
+  "events": {
+    "query_id": ["query_id"],
+    "query": ["query", "query_text"],
+    "product_id": ["product_id", "sku"],
+    "event_type": ["event_type", "action"],
+    "segment": ["client_segment_synthetic", "segment", "client_segment"]
+  }
+}

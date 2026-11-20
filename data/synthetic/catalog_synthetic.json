@@ -1,0 +1,488 @@
+[
+  {
+    "product_id": "P001",
+    "name": "Орбита Офис 50",
+    "vendor": "Орбита",
+    "category": "Офисное ПО",
+    "description": "Пакет для работы с текстами таблицами и презентациями. Совместное редактирование.",
+    "attributes": [
+      "windows",
+      "linux",
+      "документы",
+      "совместная работа"
+    ],
+    "price_rub_synthetic": 1500,
+    "margin_ratio_synthetic": 0.23,
+    "popularity_score_synthetic": 140,
+    "is_mock": true
+  },
+  {
+    "product_id": "P002",
+    "name": "Орбита Офис Сервер",
+    "vendor": "Орбита",
+    "category": "Офисное ПО",
+    "description": "On-prem сервер совместного редактирования документов для компаний.",
+    "attributes": [
+      "linux",
+      "on-prem",
+      "сервер",
+      "совместная работа"
+    ],
+    "price_rub_synthetic": 39000,
+    "margin_ratio_synthetic": 0.27,
+    "popularity_score_synthetic": 66,
+    "is_mock": true
+  },
+  {
+    "product_id": "P003",
+    "name": "Страж Endpoint",
+    "vendor": "Страж",
+    "category": "Кибербезопасность",
+    "description": "Антивирус для защиты рабочих станций, централизованная консоль.",
+    "attributes": [
+      "windows",
+      "linux",
+      "антивирус",
+      "endpoint"
+    ],
+    "price_rub_synthetic": 2300,
+    "margin_ratio_synthetic": 0.25,
+    "popularity_score_synthetic": 280,
+    "is_mock": true
+  },
+  {
+    "product_id": "P004",
+    "name": "Страж Server",
+    "vendor": "Страж",
+    "category": "Кибербезопасность",
+    "description": "Защита серверов от вредоносных программ.",
+    "attributes": [
+      "linux",
+      "windows server",
+      "сервер",
+      "антивирус"
+    ],
+    "price_rub_synthetic": 8500,
+    "margin_ratio_synthetic": 0.2,
+    "popularity_score_synthetic": 144,
+    "is_mock": true
+  },
+  {
+    "product_id": "P005",
+    "name": "Страж EDR",
+    "vendor": "Страж",
+    "category": "Кибербезопасность",
+    "description": "Поиск угроз на рабочих станциях и реагирование на инциденты EDR.",
+    "attributes": [
+      "windows",
+      "linux",
+      "edr",
+      "угрозы"
+    ],
+    "price_rub_synthetic": 9800,
+    "margin_ratio_synthetic": 0.31,
+    "popularity_score_synthetic": 96,
+    "is_mock": true
+  },
+  {
+    "product_id": "P006",
+    "name": "Сфера Архив",
+    "vendor": "Сфера",
+    "category": "Резервное копирование",
+    "description": "Резервное копирование рабочих станций и файловых серверов.",
+    "attributes": [
+      "windows",
+      "linux",
+      "бэкап",
+      "backup"
+    ],
+    "price_rub_synthetic": 7000,
+    "margin_ratio_synthetic": 0.24,
+    "popularity_score_synthetic": 135,
+    "is_mock": true
+  },
+  {
+    "product_id": "P007",
+    "name": "Сфера Облако Backup",
+    "vendor": "Сфера",
+    "category": "Резервное копирование",
+    "description": "Облачные резервные копии и восстановление после сбоев.",
+    "attributes": [
+      "cloud",
+      "backup",
+      "бэкап"
+    ],
+    "price_rub_synthetic": 5700,
+    "margin_ratio_synthetic": 0.29,
+    "popularity_score_synthetic": 85,
+    "is_mock": true
+  },
+  {
+    "product_id": "P008",
+    "name": "Точка CRM",
+    "vendor": "Точка",
+    "category": "CRM",
+    "description": "Система управления продажами, сделками и воронкой.",
+    "attributes": [
+      "cloud",
+      "crm",
+      "продажи"
+    ],
+    "price_rub_synthetic": 4900,
+    "margin_ratio_synthetic": 0.32,
+    "popularity_score_synthetic": 220,
+    "is_mock": true
+  },
+  {
+    "product_id": "P009",
+    "name": "Точка CRM Локальная",
+    "vendor": "Точка",
+    "category": "CRM",
+    "description": "CRM для установки в собственной сети организации.",
+    "attributes": [
+      "on-prem",
+      "linux",
+      "crm"
+    ],
+    "price_rub_synthetic": 59000,
+    "margin_ratio_synthetic": 0.22,
+    "popularity_score_synthetic": 68,
+    "is_mock": true
+  },
+  {
+    "product_id": "P010",
+    "name": "Вектор Проекты",
+    "vendor": "Вектор",
+    "category": "Управление проектами",
+    "description": "Задачи, Kanban, диаграммы Ганта и командная работа.",
+    "attributes": [
+      "kanban",
+      "задачи",
+      "cloud"
+    ],
+    "price_rub_synthetic": 3400,
+    "margin_ratio_synthetic": 0.18,
+    "popularity_score_synthetic": 145,
+    "is_mock": true
+  },
+  {
+    "product_id": "P011",
+    "name": "Вектор Проекты Enterprise",
+    "vendor": "Вектор",
+    "category": "Управление проектами",
+    "description": "Корпоративный on-prem трекер задач и проектов с API.",
+    "attributes": [
+      "on-prem",
+      "linux",
+      "задачи",
+      "api"
+    ],
+    "price_rub_synthetic": 35000,
+    "margin_ratio_synthetic": 0.26,
+    "popularity_score_synthetic": 52,
+    "is_mock": true
+  },
+  {
+    "product_id": "P012",
+    "name": "База SQL Lite",
+    "vendor": "База",
+    "category": "Базы данных",
+    "description": "Локальная СУБД для аналитических приложений.",
+    "attributes": [
+      "sql",
+      "database",
+      "linux"
+    ],
+    "price_rub_synthetic": 2200,
+    "margin_ratio_synthetic": 0.21,
+    "popularity_score_synthetic": 64,
+    "is_mock": true
+  },
+  {
+    "product_id": "P013",
+    "name": "База SQL Enterprise",
+    "vendor": "База",
+    "category": "Базы данных",
+    "description": "Корпоративная СУБД высокой доступности и резервированием.",
+    "attributes": [
+      "sql",
+      "database",
+      "кластер"
+    ],
+    "price_rub_synthetic": 39000,
+    "margin_ratio_synthetic": 0.3,
+    "popularity_score_synthetic": 77,
+    "is_mock": true
+  },
+  {
+    "product_id": "P014",
+    "name": "Почта Контур",
+    "vendor": "Контур",
+    "category": "Коммуникации",
+    "description": "Корпоративная почта и календари, собственный сервер.",
+    "attributes": [
+      "почта",
+      "on-prem",
+      "linux"
+    ],
+    "price_rub_synthetic": 16900,
+    "margin_ratio_synthetic": 0.19,
+    "popularity_score_synthetic": 172,
+    "is_mock": true
+  },
+  {
+    "product_id": "P015",
+    "name": "Почта Контур Cloud",
+    "vendor": "Контур",
+    "category": "Коммуникации",
+    "description": "Облачная корпоративная почта и календарь.",
+    "attributes": [
+      "cloud",
+      "почта"
+    ],
+    "price_rub_synthetic": 3700,
+    "margin_ratio_synthetic": 0.33,
+    "popularity_score_synthetic": 160,
+    "is_mock": true
+  },
+  {
+    "product_id": "P016",
+    "name": "Линия Видеосвязь",
+    "vendor": "Линия",
+    "category": "Коммуникации",
+    "description": "Видеоконференции для команды и онлайн-встреч.",
+    "attributes": [
+      "видеосвязь",
+      "вкс",
+      "cloud"
+    ],
+    "price_rub_synthetic": 4200,
+    "margin_ratio_synthetic": 0.25,
+    "popularity_score_synthetic": 170,
+    "is_mock": true
+  },
+  {
+    "product_id": "P017",
+    "name": "Линия Видеосвязь Server",
+    "vendor": "Линия",
+    "category": "Коммуникации",
+    "description": "Локальный сервер видеоконференций для закрытой сети.",
+    "attributes": [
+      "on-prem",
+      "вкс",
+      "linux"
+    ],
+    "price_rub_synthetic": 46000,
+    "margin_ratio_synthetic": 0.21,
+    "popularity_score_synthetic": 47,
+    "is_mock": true
+  },
+  {
+    "product_id": "P018",
+    "name": "Ритм Мониторинг",
+    "vendor": "Ритм",
+    "category": "DevOps",
+    "description": "Мониторинг серверов, метрик, алертов и доступности.",
+    "attributes": [
+      "linux",
+      "monitoring",
+      "сервер"
+    ],
+    "price_rub_synthetic": 4100,
+    "margin_ratio_synthetic": 0.27,
+    "popularity_score_synthetic": 115,
+    "is_mock": true
+  },
+  {
+    "product_id": "P019",
+    "name": "Ритм Логи",
+    "vendor": "Ритм",
+    "category": "DevOps",
+    "description": "Система централизованного сбора логов и поиска ошибок.",
+    "attributes": [
+      "linux",
+      "logs",
+      "siem"
+    ],
+    "price_rub_synthetic": 6900,
+    "margin_ratio_synthetic": 0.24,
+    "popularity_score_synthetic": 88,
+    "is_mock": true
+  },
+  {
+    "product_id": "P020",
+    "name": "Ключ IAM",
+    "vendor": "Ключ",
+    "category": "Кибербезопасность",
+    "description": "Контроль доступа сотрудников, SSO и MFA.",
+    "attributes": [
+      "iam",
+      "sso",
+      "mfa",
+      "доступ"
+    ],
+    "price_rub_synthetic": 6700,
+    "margin_ratio_synthetic": 0.28,
+    "popularity_score_synthetic": 142,
+    "is_mock": true
+  },
+  {
+    "product_id": "P021",
+    "name": "Ключ Пароли",
+    "vendor": "Ключ",
+    "category": "Кибербезопасность",
+    "description": "Хранилище паролей и корпоративных секретов.",
+    "attributes": [
+      "password",
+      "доступ"
+    ],
+    "price_rub_synthetic": 3100,
+    "margin_ratio_synthetic": 0.34,
+    "popularity_score_synthetic": 152,
+    "is_mock": true
+  },
+  {
+    "product_id": "P022",
+    "name": "Поток Документы",
+    "vendor": "Поток",
+    "category": "Документооборот",
+    "description": "Электронное согласование документов и маршруты подписания.",
+    "attributes": [
+      "эдо",
+      "workflow",
+      "подпись"
+    ],
+    "price_rub_synthetic": 3500,
+    "margin_ratio_synthetic": 0.22,
+    "popularity_score_synthetic": 188,
+    "is_mock": true
+  },
+  {
+    "product_id": "P023",
+    "name": "Поток Документы OnPrem",
+    "vendor": "Поток",
+    "category": "Документооборот",
+    "description": "Локальный электронный документооборот в закрытом контуре.",
+    "attributes": [
+      "on-prem",
+      "эдо",
+      "linux"
+    ],
+    "price_rub_synthetic": 42000,
+    "margin_ratio_synthetic": 0.17,
+    "popularity_score_synthetic": 45,
+    "is_mock": true
+  },
+  {
+    "product_id": "P024",
+    "name": "Грань ERP",
+    "vendor": "Грань",
+    "category": "ERP",
+    "description": "Учёт закупок, складов, финансов и продаж.",
+    "attributes": [
+      "erp",
+      "учет",
+      "склад"
+    ],
+    "price_rub_synthetic": 15800,
+    "margin_ratio_synthetic": 0.31,
+    "popularity_score_synthetic": 111,
+    "is_mock": true
+  },
+  {
+    "product_id": "P025",
+    "name": "Грань Склад",
+    "vendor": "Грань",
+    "category": "ERP",
+    "description": "Управление складскими остатками и поставками.",
+    "attributes": [
+      "wms",
+      "склад",
+      "учет"
+    ],
+    "price_rub_synthetic": 8600,
+    "margin_ratio_synthetic": 0.29,
+    "popularity_score_synthetic": 83,
+    "is_mock": true
+  },
+  {
+    "product_id": "P026",
+    "name": "Заря BI",
+    "vendor": "Заря",
+    "category": "BI и аналитика",
+    "description": "Дашборды, отчёты, визуализация бизнес-метрик и SQL.",
+    "attributes": [
+      "bi",
+      "дашборды",
+      "sql"
+    ],
+    "price_rub_synthetic": 12000,
+    "margin_ratio_synthetic": 0.2,
+    "popularity_score_synthetic": 132,
+    "is_mock": true
+  },
+  {
+    "product_id": "P027",
+    "name": "Заря BI SelfHost",
+    "vendor": "Заря",
+    "category": "BI и аналитика",
+    "description": "Локальная BI-платформа on-prem с контролем данных.",
+    "attributes": [
+      "bi",
+      "on-prem",
+      "linux"
+    ],
+    "price_rub_synthetic": 36000,
+    "margin_ratio_synthetic": 0.26,
+    "popularity_score_synthetic": 58,
+    "is_mock": true
+  },
+  {
+    "product_id": "P028",
+    "name": "Маяк Helpdesk",
+    "vendor": "Маяк",
+    "category": "ITSM",
+    "description": "Управление заявками в IT-поддержку и SLA.",
+    "attributes": [
+      "itsm",
+      "helpdesk",
+      "заявки"
+    ],
+    "price_rub_synthetic": 6500,
+    "margin_ratio_synthetic": 0.18,
+    "popularity_score_synthetic": 99,
+    "is_mock": true
+  },
+  {
+    "product_id": "P029",
+    "name": "Маяк Service Desk",
+    "vendor": "Маяк",
+    "category": "ITSM",
+    "description": "Сервис-деск с каталогом услуг и учётом оборудования.",
+    "attributes": [
+      "service desk",
+      "itsm",
+      "asset"
+    ],
+    "price_rub_synthetic": 9700,
+    "margin_ratio_synthetic": 0.35,
+    "popularity_score_synthetic": 117,
+    "is_mock": true
+  },
+  {
+    "product_id": "P030",
+    "name": "Нейтрон DLP",
+    "vendor": "Нейтрон",
+    "category": "Кибербезопасность",
+    "description": "Предотвращение утечек корпоративных данных и контроль каналов.",
+    "attributes": [
+      "dlp",
+      "утечки",
+      "безопасность"
+    ],
+    "price_rub_synthetic": 20000,
+    "margin_ratio_synthetic": 0.36,
+    "popularity_score_synthetic": 71,
+    "is_mock": true
+  }
+]

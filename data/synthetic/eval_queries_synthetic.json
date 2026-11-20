@@ -1,0 +1,318 @@
+[
+  {
+    "query_id": "Q001",
+    "query": "орбита офис",
+    "relevant_product_ids": [
+      "P001"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q002",
+    "query": "Орбита Офис Сервер",
+    "relevant_product_ids": [
+      "P002"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q003",
+    "query": "антивирус для рабочих станций",
+    "relevant_product_ids": [
+      "P003"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q004",
+    "query": "защита endpoint компьютеров",
+    "relevant_product_ids": [
+      "P003"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q005",
+    "query": "антивирс для пк",
+    "relevant_product_ids": [
+      "P003"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q006",
+    "query": "защита серверов от вирусов",
+    "relevant_product_ids": [
+      "P004"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q007",
+    "query": "edr расследование угроз",
+    "relevant_product_ids": [
+      "P005"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q008",
+    "query": "резервное копирование сервера",
+    "relevant_product_ids": [
+      "P006"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q009",
+    "query": "бэкап в облако",
+    "relevant_product_ids": [
+      "P007"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q010",
+    "query": "crm для продаж",
+    "relevant_product_ids": [
+      "P008"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q011",
+    "query": "локальная срм без облака",
+    "relevant_product_ids": [
+      "P009"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q012",
+    "query": "система задач канбан",
+    "relevant_product_ids": [
+      "P010"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q013",
+    "query": "трекер проектов on-prem",
+    "relevant_product_ids": [
+      "P011"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q014",
+    "query": "субд для локальной аналитики",
+    "relevant_product_ids": [
+      "P012"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q015",
+    "query": "корпоративная sql база",
+    "relevant_product_ids": [
+      "P013"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q016",
+    "query": "почта на своем сервере",
+    "relevant_product_ids": [
+      "P014"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q017",
+    "query": "почта в облаке",
+    "relevant_product_ids": [
+      "P015"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q018",
+    "query": "вкс для конференций",
+    "relevant_product_ids": [
+      "P016"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q019",
+    "query": "видеосвязь в закрытой сети",
+    "relevant_product_ids": [
+      "P017"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q020",
+    "query": "мониторинг серверов",
+    "relevant_product_ids": [
+      "P018"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q021",
+    "query": "поиск по логам",
+    "relevant_product_ids": [
+      "P019"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q022",
+    "query": "управление доступом sso mfa",
+    "relevant_product_ids": [
+      "P020"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q023",
+    "query": "менеджер корпоративных паролей",
+    "relevant_product_ids": [
+      "P021"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q024",
+    "query": "электронное согласование документов",
+    "relevant_product_ids": [
+      "P022"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q025",
+    "query": "локальный эдо",
+    "relevant_product_ids": [
+      "P023"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q026",
+    "query": "erp для учета закупок",
+    "relevant_product_ids": [
+      "P024"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q027",
+    "query": "складские остатки",
+    "relevant_product_ids": [
+      "P025"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q028",
+    "query": "дашборды и отчеты bi",
+    "relevant_product_ids": [
+      "P026"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q029",
+    "query": "би локально on prem",
+    "relevant_product_ids": [
+      "P027"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q030",
+    "query": "тикетница для IT поддержки",
+    "relevant_product_ids": [
+      "P028"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q031",
+    "query": "service desk учет оборудования",
+    "relevant_product_ids": [
+      "P029"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q032",
+    "query": "dlp от утечек данных",
+    "relevant_product_ids": [
+      "P030"
+    ],
+    "kind": "search",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q033",
+    "query": "компьютерные мыши",
+    "relevant_product_ids": [],
+    "kind": "zero_result",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q034",
+    "query": "облачный GPU сервер для обучения",
+    "relevant_product_ids": [],
+    "kind": "zero_result",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q035",
+    "query": "система для управления рестораном",
+    "relevant_product_ids": [],
+    "kind": "zero_result",
+    "is_mock": true
+  },
+  {
+    "query_id": "Q036",
+    "query": "лицензия windows 9999",
+    "relevant_product_ids": [],
+    "kind": "zero_result",
+    "is_mock": true
+  }
+]

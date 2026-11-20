@@ -1,0 +1,919 @@
+{
+  "note": "SYNTHETIC: 30 товаров, 36 запросов, разметка командой. Не показатель качества на реальном каталоге.",
+  "ablation": [
+    {
+      "name": "A0 BM25 по полям (без морфологии)",
+      "dev": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 0.8125,
+        "mrr@10": 0.75,
+        "ndcg@10": 0.7663662191964322,
+        "false_zero_rate": 0.125,
+        "zero_detection": 0.5,
+        "zero_rate_all": 0.16666666666666666
+      },
+      "test": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 0.9375,
+        "mrr@10": 0.875,
+        "ndcg@10": 0.8913662191964322,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.0,
+        "zero_rate_all": 0.0
+      },
+      "all": {
+        "n_search": 32,
+        "n_zero": 4,
+        "recall@10": 0.875,
+        "mrr@10": 0.8125,
+        "ndcg@10": 0.8288662191964322,
+        "false_zero_rate": 0.0625,
+        "zero_detection": 0.25,
+        "zero_rate_all": 0.08333333333333333
+      }
+    },
+    {
+      "name": "A1 + стемминг RU/EN",
+      "dev": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 0.9375,
+        "mrr@10": 0.8333333333333334,
+        "ndcg@10": 0.8601162191964322,
+        "false_zero_rate": 0.0625,
+        "zero_detection": 0.5,
+        "zero_rate_all": 0.1111111111111111
+      },
+      "test": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 0.9375,
+        "ndcg@10": 0.9538662191964322,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.0,
+        "zero_rate_all": 0.0
+      },
+      "all": {
+        "n_search": 32,
+        "n_zero": 4,
+        "recall@10": 0.96875,
+        "mrr@10": 0.8854166666666666,
+        "ndcg@10": 0.9069912191964322,
+        "false_zero_rate": 0.03125,
+        "zero_detection": 0.25,
+        "zero_rate_all": 0.05555555555555555
+      }
+    },
+    {
+      "name": "A2 + словарь синонимов/сленга",
+      "dev": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 0.9375,
+        "mrr@10": 0.90625,
+        "ndcg@10": 0.9144331095982161,
+        "false_zero_rate": 0.0625,
+        "zero_detection": 0.5,
+        "zero_rate_all": 0.1111111111111111
+      },
+      "test": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 0.96875,
+        "ndcg@10": 0.9769331095982161,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.0,
+        "zero_rate_all": 0.0
+      },
+      "all": {
+        "n_search": 32,
+        "n_zero": 4,
+        "recall@10": 0.96875,
+        "mrr@10": 0.9375,
+        "ndcg@10": 0.9456831095982161,
+        "false_zero_rate": 0.03125,
+        "zero_detection": 0.25,
+        "zero_rate_all": 0.05555555555555555
+      }
+    },
+    {
+      "name": "A3 + лексикон команды (аббревиатуры)",
+      "dev": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 0.96875,
+        "ndcg@10": 0.9769331095982161,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.5,
+        "zero_rate_all": 0.05555555555555555
+      },
+      "test": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.0,
+        "zero_rate_all": 0.0
+      },
+      "all": {
+        "n_search": 32,
+        "n_zero": 4,
+        "recall@10": 1.0,
+        "mrr@10": 0.984375,
+        "ndcg@10": 0.988466554799108,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.25,
+        "zero_rate_all": 0.027777777777777776
+      }
+    },
+    {
+      "name": "A4 + опечатки/раскладка",
+      "dev": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 0.96875,
+        "ndcg@10": 0.9769331095982161,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.5,
+        "zero_rate_all": 0.05555555555555555
+      },
+      "test": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.0,
+        "zero_rate_all": 0.0
+      },
+      "all": {
+        "n_search": 32,
+        "n_zero": 4,
+        "recall@10": 1.0,
+        "mrr@10": 0.984375,
+        "ndcg@10": 0.988466554799108,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.25,
+        "zero_rate_all": 0.027777777777777776
+      }
+    },
+    {
+      "name": "A5 + отрицания, родовые слова, покрытие названия",
+      "dev": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 0.96875,
+        "ndcg@10": 0.9769331095982161,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.5,
+        "zero_rate_all": 0.05555555555555555
+      },
+      "test": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.0,
+        "zero_rate_all": 0.0
+      },
+      "all": {
+        "n_search": 32,
+        "n_zero": 4,
+        "recall@10": 1.0,
+        "mrr@10": 0.984375,
+        "ndcg@10": 0.988466554799108,
+        "false_zero_rate": 0.0,
+        "zero_detection": 0.25,
+        "zero_rate_all": 0.027777777777777776
+      }
+    },
+    {
+      "name": "A6 + coverage gate (детект «нет в каталоге»)",
+      "dev": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0,
+        "false_zero_rate": 0.0,
+        "zero_detection": 1.0,
+        "zero_rate_all": 0.1111111111111111
+      },
+      "test": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 0.875,
+        "mrr@10": 0.875,
+        "ndcg@10": 0.875,
+        "false_zero_rate": 0.125,
+        "zero_detection": 1.0,
+        "zero_rate_all": 0.2222222222222222
+      },
+      "all": {
+        "n_search": 32,
+        "n_zero": 4,
+        "recall@10": 0.9375,
+        "mrr@10": 0.9375,
+        "ndcg@10": 0.9375,
+        "false_zero_rate": 0.0625,
+        "zero_detection": 1.0,
+        "zero_rate_all": 0.16666666666666666
+      }
+    },
+    {
+      "name": "A7 + бизнес-буст с relevance gate (= v1)",
+      "dev": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0,
+        "false_zero_rate": 0.0,
+        "zero_detection": 1.0,
+        "zero_rate_all": 0.1111111111111111
+      },
+      "test": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 0.875,
+        "mrr@10": 0.875,
+        "ndcg@10": 0.875,
+        "false_zero_rate": 0.125,
+        "zero_detection": 1.0,
+        "zero_rate_all": 0.2222222222222222
+      },
+      "all": {
+        "n_search": 32,
+        "n_zero": 4,
+        "recall@10": 0.9375,
+        "mrr@10": 0.9375,
+        "ndcg@10": 0.9375,
+        "false_zero_rate": 0.0625,
+        "zero_detection": 1.0,
+        "zero_rate_all": 0.16666666666666666
+      }
+    },
+    {
+      "name": "A8 + составные слова (post-test fix)",
+      "dev": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0,
+        "false_zero_rate": 0.0,
+        "zero_detection": 1.0,
+        "zero_rate_all": 0.1111111111111111
+      },
+      "test": {
+        "n_search": 16,
+        "n_zero": 2,
+        "recall@10": 0.875,
+        "mrr@10": 0.875,
+        "ndcg@10": 0.875,
+        "false_zero_rate": 0.125,
+        "zero_detection": 1.0,
+        "zero_rate_all": 0.2222222222222222
+      },
+      "all": {
+        "n_search": 32,
+        "n_zero": 4,
+        "recall@10": 0.9375,
+        "mrr@10": 0.9375,
+        "ndcg@10": 0.9375,
+        "false_zero_rate": 0.0625,
+        "zero_detection": 1.0,
+        "zero_rate_all": 0.16666666666666666
+      }
+    }
+  ],
+  "final": {
+    "dev": {
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 1.0,
+      "mrr@10": 1.0,
+      "ndcg@10": 1.0,
+      "false_zero_rate": 0.0,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.1111111111111111
+    },
+    "test": {
+      "n_search": 16,
+      "n_zero": 2,
+      "recall@10": 0.875,
+      "mrr@10": 0.875,
+      "ndcg@10": 0.875,
+      "false_zero_rate": 0.125,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.2222222222222222
+    },
+    "all": {
+      "n_search": 32,
+      "n_zero": 4,
+      "recall@10": 0.9375,
+      "mrr@10": 0.9375,
+      "ndcg@10": 0.9375,
+      "false_zero_rate": 0.0625,
+      "zero_detection": 1.0,
+      "zero_rate_all": 0.16666666666666666
+    },
+    "latency_ms": {
+      "p50": 0.124,
+      "p95": 0.269,
+      "max": 0.333,
+      "n": 180
+    }
+  },
+  "final_per_query": [
+    {
+      "query_id": "Q001",
+      "query": "орбита офис",
+      "split": "dev",
+      "expected": [
+        "P001"
+      ],
+      "got": [
+        "P001",
+        "P002"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q002",
+      "query": "Орбита Офис Сервер",
+      "split": "test",
+      "expected": [
+        "P002"
+      ],
+      "got": [
+        "P002",
+        "P001"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q003",
+      "query": "антивирус для рабочих станций",
+      "split": "dev",
+      "expected": [
+        "P003"
+      ],
+      "got": [
+        "P003",
+        "P004"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q004",
+      "query": "защита endpoint компьютеров",
+      "split": "test",
+      "expected": [
+        "P003"
+      ],
+      "got": [
+        "P003",
+        "P004"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q005",
+      "query": "антивирс для пк",
+      "split": "dev",
+      "expected": [
+        "P003"
+      ],
+      "got": [
+        "P003",
+        "P006",
+        "P005"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q006",
+      "query": "защита серверов от вирусов",
+      "split": "test",
+      "expected": [
+        "P004"
+      ],
+      "got": [],
+      "zero": true,
+      "recall": 0.0,
+      "rr": 0.0,
+      "ndcg": 0.0,
+      "ok": false
+    },
+    {
+      "query_id": "Q007",
+      "query": "edr расследование угроз",
+      "split": "dev",
+      "expected": [
+        "P005"
+      ],
+      "got": [
+        "P005"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q008",
+      "query": "резервное копирование сервера",
+      "split": "test",
+      "expected": [
+        "P006"
+      ],
+      "got": [
+        "P006",
+        "P007"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q009",
+      "query": "бэкап в облако",
+      "split": "dev",
+      "expected": [
+        "P007"
+      ],
+      "got": [
+        "P007",
+        "P015",
+        "P008",
+        "P010",
+        "P016"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q010",
+      "query": "crm для продаж",
+      "split": "test",
+      "expected": [
+        "P008"
+      ],
+      "got": [
+        "P008",
+        "P009",
+        "P024"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q011",
+      "query": "локальная срм без облака",
+      "split": "dev",
+      "expected": [
+        "P009"
+      ],
+      "got": [
+        "P009",
+        "P008",
+        "P024"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q012",
+      "query": "система задач канбан",
+      "split": "test",
+      "expected": [
+        "P010"
+      ],
+      "got": [
+        "P010",
+        "P011"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q013",
+      "query": "трекер проектов on-prem",
+      "split": "dev",
+      "expected": [
+        "P011"
+      ],
+      "got": [
+        "P011"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q014",
+      "query": "субд для локальной аналитики",
+      "split": "test",
+      "expected": [
+        "P012"
+      ],
+      "got": [
+        "P012",
+        "P027",
+        "P026"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q015",
+      "query": "корпоративная sql база",
+      "split": "dev",
+      "expected": [
+        "P013"
+      ],
+      "got": [
+        "P013",
+        "P012"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q016",
+      "query": "почта на своем сервере",
+      "split": "test",
+      "expected": [
+        "P014"
+      ],
+      "got": [
+        "P014",
+        "P015"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q017",
+      "query": "почта в облаке",
+      "split": "dev",
+      "expected": [
+        "P015"
+      ],
+      "got": [
+        "P015",
+        "P007",
+        "P008",
+        "P010",
+        "P016"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q018",
+      "query": "вкс для конференций",
+      "split": "test",
+      "expected": [
+        "P016"
+      ],
+      "got": [],
+      "zero": true,
+      "recall": 0.0,
+      "rr": 0.0,
+      "ndcg": 0.0,
+      "ok": false
+    },
+    {
+      "query_id": "Q019",
+      "query": "видеосвязь в закрытой сети",
+      "split": "dev",
+      "expected": [
+        "P017"
+      ],
+      "got": [
+        "P017"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q020",
+      "query": "мониторинг серверов",
+      "split": "test",
+      "expected": [
+        "P018"
+      ],
+      "got": [
+        "P018"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q021",
+      "query": "поиск по логам",
+      "split": "dev",
+      "expected": [
+        "P019"
+      ],
+      "got": [
+        "P019"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q022",
+      "query": "управление доступом sso mfa",
+      "split": "test",
+      "expected": [
+        "P020"
+      ],
+      "got": [
+        "P020"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q023",
+      "query": "менеджер корпоративных паролей",
+      "split": "dev",
+      "expected": [
+        "P021"
+      ],
+      "got": [
+        "P021"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q024",
+      "query": "электронное согласование документов",
+      "split": "test",
+      "expected": [
+        "P022"
+      ],
+      "got": [
+        "P022",
+        "P023"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q025",
+      "query": "локальный эдо",
+      "split": "dev",
+      "expected": [
+        "P023"
+      ],
+      "got": [
+        "P023",
+        "P022"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q026",
+      "query": "erp для учета закупок",
+      "split": "test",
+      "expected": [
+        "P024"
+      ],
+      "got": [
+        "P024",
+        "P025"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q027",
+      "query": "складские остатки",
+      "split": "dev",
+      "expected": [
+        "P025"
+      ],
+      "got": [
+        "P025"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q028",
+      "query": "дашборды и отчеты bi",
+      "split": "test",
+      "expected": [
+        "P026"
+      ],
+      "got": [
+        "P026"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q029",
+      "query": "би локально on prem",
+      "split": "dev",
+      "expected": [
+        "P027"
+      ],
+      "got": [
+        "P027",
+        "P026"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q030",
+      "query": "тикетница для IT поддержки",
+      "split": "test",
+      "expected": [
+        "P028"
+      ],
+      "got": [
+        "P028"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q031",
+      "query": "service desk учет оборудования",
+      "split": "dev",
+      "expected": [
+        "P029"
+      ],
+      "got": [
+        "P029"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q032",
+      "query": "dlp от утечек данных",
+      "split": "test",
+      "expected": [
+        "P030"
+      ],
+      "got": [
+        "P030"
+      ],
+      "zero": false,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "ok": true
+    },
+    {
+      "query_id": "Q033",
+      "query": "компьютерные мыши",
+      "split": "dev",
+      "expected": [],
+      "got": [],
+      "zero": true,
+      "ok": true
+    },
+    {
+      "query_id": "Q034",
+      "query": "облачный GPU сервер для обучения",
+      "split": "test",
+      "expected": [],
+      "got": [],
+      "zero": true,
+      "ok": true
+    },
+    {
+      "query_id": "Q035",
+      "query": "система для управления рестораном",
+      "split": "dev",
+      "expected": [],
+      "got": [],
+      "zero": true,
+      "ok": true
+    },
+    {
+      "query_id": "Q036",
+      "query": "лицензия windows 9999",
+      "split": "test",
+      "expected": [],
+      "got": [],
+      "zero": true,
+      "ok": true
+    }
+  ],
+  "boost_audit": {
+    "queries_top1_changed": 0,
+    "relevant_rank_changes": [],
+    "harmful_promotions": []
+  }
+}
